@@ -75,7 +75,7 @@ build {
   #  }
 
   provisioner "ansible" {
-    playbook_file = "./tomcat-playbook.yaml"
+    playbook_file = "./java-playbook.yaml"
   }
   provisioner "ansible" {
     playbook_file = "./bigdata-playbook.yaml"
