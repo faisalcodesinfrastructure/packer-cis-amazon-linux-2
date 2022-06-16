@@ -4,43 +4,9 @@
   become: true
   
   tasks:
-    - name: Add HashiCorp repository
-      yum_repository:
-        name: hashicorp
-        description: Hashicorp Stable - $basearch
-        baseurl: https://rpm.releases.hashicorp.com/AmazonLinux/latest/$basearch/stable
-        enabled: yes
-        gpgcheck: yes
-        gpgkey: https://rpm.releases.hashicorp.com/gpg
-      
-    - name: Install Hashicorp Terraform
+    - name: Install Tomcat
       package:
-        name: 'terraform'
-        state: present
-  
-    - name: Install Hashicorp Packer
-      package:
-        name: 'packer'
-        state: present
-  
-    - name: Install Hashicorp Vault Enterprise
-      package:
-        name: 'vault-enterprise'
-        state: present
-  
-    - name: Install Hashicorp Consul Enterprise
-      package:
-        name: 'consul-enterprise'
-        state: present
-  
-    - name: Install Hashicorp Nomad Enterprise
-      package:
-        name: 'nomad-enterprise'
-        state: present
-
-    - name: Install htop
-      package:
-        name: 'htop'
+        name: 'tomcat'
         state: present
 
     - name: Upgrade all packages

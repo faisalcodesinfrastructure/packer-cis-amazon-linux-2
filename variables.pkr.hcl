@@ -9,7 +9,7 @@ variable "aws_region" {
 variable "aws_instance_type" {
   type        = string
   description = "Instance on which to build image."
-  default     = "t2.micro"
+  default     = "t2.medium"
 }
 
 variable "encrypt_boot" {

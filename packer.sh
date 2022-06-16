@@ -1,3 +1,3 @@
 #!/bin/bash
 
-packer build -var-file="yash.pkrvars.hcl" .
+packer build -var-file="faisal.pkrvars.hcl" .
