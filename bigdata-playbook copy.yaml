@@ -1,0 +1,15 @@
+---
+- name: Provision image
+  hosts: default
+  become: true
+  
+  tasks:
+    - name: Install NGINX
+      package:
+        name: 'nginx'
+        state: present
+
+    - name: Upgrade all packages
+      yum:
+        name: '*'
+        state: latest

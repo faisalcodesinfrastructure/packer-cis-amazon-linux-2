@@ -23,7 +23,7 @@ source "amazon-ebs" "cis-amazon-linux-2" {
   #    subnet_id = "subnet-d787d4fa"
   #  }
   #}
-  
+
   source_ami_filter {
     filters = {
       virtualization-type = var.source_ami_filter_virtualization_type
@@ -75,6 +75,9 @@ build {
   #  }
 
   provisioner "ansible" {
-    playbook_file = "./playbook.yaml"
+    playbook_file = "./tomcat-team.yaml"
+  }
+  provisioner "ansible" {
+    playbook_file = "./bigdata-team.yaml"
   }
 }
