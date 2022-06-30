@@ -7,7 +7,7 @@
 # System Activity Reporter Tool
     - name: Install Sar
       package:
-        name: 'sar'
+        name: 'sysstat'
         state: present
  
     - name: Upgrade all packages
