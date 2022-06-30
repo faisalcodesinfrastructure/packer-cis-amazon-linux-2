@@ -1,14 +1,15 @@
 ---
-- name: Provision image
+- name: Provision Base Image
   hosts: default
   become: true
-  
-  tasks:
-    - name: Install HTOP
-      package:
-        name: 'htop'
-        state: present
 
+  tasks:
+# System Activity Reporter Tool
+    - name: Install Sar
+      package:
+        name: 'sar'
+        state: present
+ 
     - name: Upgrade all packages
       yum:
         name: '*'
