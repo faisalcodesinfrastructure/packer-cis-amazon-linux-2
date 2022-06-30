@@ -17,7 +17,7 @@ source "amazon-ebs" "cis-amazon-linux-2" {
   instance_type = var.aws_instance_type
   encrypt_boot  = var.encrypt_boot
   kms_key_id    = var.encrypt_boot ? var.aws_kms_key_id : ""
-  
+
   #subnet_filter = {
   #  filters = {
   #    subnet_id = "subnet-d787d4fa"
@@ -75,9 +75,6 @@ build {
   #  }
 
   provisioner "ansible" {
-    playbook_file = "./java-playbook.yaml"
-  }
-  provisioner "ansible" {
-    playbook_file = "./bigdata-playbook.yaml"
+    playbook_file = "./fepoc.foundation.yaml"
   }
 }
